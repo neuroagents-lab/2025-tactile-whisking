@@ -1,0 +1,21 @@
+lr: 0.001
+epochs: 100  # if null, will be 100
+warmup_epochs: null  # if null, will be epochs // 4
+batch_size: 256
+num_devices: 1
+resume_from_ckpt: False
+seed: 0
+use_wandb: True  # False
+optimizer: 'sgd'  # 'adamw', 'sgd', 'lars
+scheduler: 'step_lr'  # 'cos_w_warmup', 'step_lr'
+weight_decay: 5e-4
+momentum: 0.9
+step_size: 30  # specifically for StepLR
+num_workers: 32
+run_name: null
+ssl: False # False or name-of-the-loss
+ssl_args: null
+ssl_temp_tran: True  # whether to include temporal flip in the SSL data augmentation
+min_lr: 0.0
+warmup_ratio: 0.0001
+ssl_finetune: False  # whether to finetune the SSL trained model with a trainable linear layer

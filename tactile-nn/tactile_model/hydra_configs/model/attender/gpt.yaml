@@ -1,0 +1,6 @@
+name: 'GPT'
+block_size: 65  # max positional encoding size (i.e., T)
+n_layer: 8
+n_head: 4
+dropout: 0.1
+num_feat_per_step: 1

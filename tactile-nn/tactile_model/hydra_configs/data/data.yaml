@@ -1,0 +1,8 @@
+num_classes: 117
+data_dir: '/data/group_data/neuroagents_lab/training_datasets/tactile_whiskers/1000hz/processed'
+input_shape: null
+n_times: 22
+data_transform:
+  name: 'ShapeNetReshape' # null
+  kwargs: # null
+    n_times: ${data.n_times}

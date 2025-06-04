@@ -1,0 +1,5 @@
+name: 'S4Enc'
+model_dim: 512
+nlayers: 4
+dropout: 0.2
+prenorm: False

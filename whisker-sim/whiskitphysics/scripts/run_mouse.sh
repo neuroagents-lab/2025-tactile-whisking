@@ -1,0 +1,11 @@
+../build/whiskit_gui \
+--CDIST 5 \
+--CYAW 180 \
+--CPITCH 0 \
+--CX 0 \
+--CY 20 \
+--CZ 5 \
+--DEBUG 0 \
+--PRINT 2 \
+--WHISKER_NAMES ALL \
+--WHISKER_MODEL_DIR "whisker_param_average_mouse" \

@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "name": "conv1",
+      "shape_from": null,
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "Conv2dCell",
+        "out_channels": 96,
+        "ksize": [2, 2],
+        "stride": 1,
+        "padding": "valid",
+        "init_dict": null,
+        "bias": 0.0,
+        "activation": null,
+        "batchnorm": null
+      },
+      "recurrent_cell": {
+        "name": "UGRNNCell",
+        "input_in_channels": 96,
+        "out_channels": 96,
+        "ksize": [2, 2],
+        "layernorm": true
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 96
+    },
+    {
+      "name": "conv2",
+      "shape_from": "conv1",
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "Conv2dCell",
+        "out_channels": 128,
+        "ksize": [2, 2],
+        "stride": 1,
+        "padding": "same",
+        "init_dict": null,
+        "bias": 0.0,
+        "activation": null,
+        "batchnorm": null
+      },
+      "recurrent_cell": {
+        "name": "UGRNNCell",
+        "input_in_channels": 128,
+        "out_channels": 128,
+        "ksize": [2, 2],
+        "layernorm": true
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 128
+    },
+    {
+      "name": "conv3",
+      "shape_from": "conv2",
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "Conv2dCell",
+        "out_channels": 256,
+        "ksize": [2, 2],
+        "stride": 1,
+        "padding": "same",
+        "init_dict": null,
+        "bias": 0.0,
+        "activation": null,
+        "batchnorm": null
+      },
+      "recurrent_cell": {
+        "name": "UGRNNCell",
+        "input_in_channels": 256,
+        "out_channels": 256,
+        "ksize": [2, 2],
+        "layernorm": true
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 256
+    },
+    {
+      "name": "conv4",
+      "shape_from": "conv3",
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "Conv2dCell",
+        "out_channels": 384,
+        "ksize": [2, 2],
+        "stride": 1,
+        "padding": "same",
+        "init_dict": null,
+        "bias": 0.0,
+        "activation": null,
+        "batchnorm": null
+      },
+      "recurrent_cell": {
+        "name": "UGRNNCell",
+        "input_in_channels": 384,
+        "out_channels": 384,
+        "ksize": [2, 2],
+        "layernorm": true
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 384
+    },
+    {
+      "name": "conv5",
+      "shape_from": "conv4",
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "Conv2dCell",
+        "out_channels": 384,
+        "ksize": [2, 2],
+        "stride": 1,
+        "padding": "same",
+        "init_dict": null,
+        "bias": 0.0,
+        "activation": null,
+        "batchnorm": null
+      },
+      "recurrent_cell": {
+        "name": "UGRNNCell",
+        "input_in_channels": 384,
+        "out_channels": 384,
+        "ksize": [2, 2],
+        "layernorm": true
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 384
+    },
+    {
+      "name": "conv6",
+      "shape_from": "conv5",
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "Conv2dCell",
+        "out_channels": 256,
+        "ksize": [2, 2],
+        "stride": 1,
+        "padding": "same",
+        "init_dict": null,
+        "bias": 0.0,
+        "activation": null,
+        "batchnorm": null
+      },
+      "recurrent_cell": {
+        "name": "UGRNNCell",
+        "input_in_channels": 256,
+        "out_channels": 256,
+        "ksize": [2, 2],
+        "layernorm": true
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 256
+    },
+    {
+      "name": "fc7",
+      "shape_from": "conv6",
+      "harbor_policy": {
+        "name": "ResizeConcat"
+      },
+      "pre_memory": {
+        "name": "FullyConnected",
+        "out_channels": 1024,
+        "init_dict": null,
+        "bias": 0.1,
+        "activation": null,
+        "batchnorm": null,
+        "dropout": 0.0
+      },
+      "recurrent_cell": {
+        "name": "IdentityCell"
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 1024
+    },
+    {
+      "name": "fc8",
+      "shape_from": "fc7",
+      "harbor_policy": {
+        "name": "Identity"
+      },
+      "pre_memory": {
+        "name": "FullyConnected",
+        "out_channels": 512,
+        "init_dict": null,
+        "bias": 0.1,
+        "activation": null,
+        "batchnorm": null,
+        "dropout": 0.0
+      },
+      "recurrent_cell": {
+        "name": "IdentityCell"
+      },
+      "post_memory": {
+        "name": "ActivationLayer",
+        "activation": "ReLU"
+      },
+      "out_channels": 512
+    }
+  ],
+  "edges": [
+    {"from": "conv1", "to": "conv2"},
+    {"from": "conv3", "to": "conv2"},
+    {"from": "conv4", "to": "conv2"},
+    {"from": "conv2", "to": "conv3"},
+    {"from": "conv4", "to": "conv3"},
+    {"from": "conv5", "to": "conv3"},
+    {"from": "conv3", "to": "conv4"},
+    {"from": "conv5", "to": "conv4"},
+    {"from": "conv6", "to": "conv4"},
+    {"from": "conv4", "to": "conv5"},
+    {"from": "conv6", "to": "conv5"},
+    {"from": "conv5", "to": "conv6"},
+    {"from": "conv6", "to": "fc7"},
+    {"from": "conv4", "to": "fc7"},
+    {"from": "conv2", "to": "fc7"},
+    {"from": "fc7", "to": "fc8"}
+  ],
+  "input_nodes": ["conv1"],
+  "output_node": "fc8",
+  "input_shape": [3, 6, 6],
+  "num_timesteps": 22
+}

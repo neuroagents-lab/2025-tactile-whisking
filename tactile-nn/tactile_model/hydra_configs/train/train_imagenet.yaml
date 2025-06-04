@@ -1,0 +1,15 @@
+lr: 0.1
+epochs: 100  # if null, will be 100
+warmup_epochs: null  # if null, will be epochs // 4
+batch_size: 256
+num_devices: 1
+resume_from_ckpt: False
+seed: 0
+use_wandb: True  # False
+optimizer: 'sgd'  # adamw
+scheduler: 'cos_w_warmup'  # 'step_lr'
+weight_decay: 1e-4
+momentum: 0.9
+step_size: 30  # specifically for StepLR
+num_workers: 32
+run_name: null

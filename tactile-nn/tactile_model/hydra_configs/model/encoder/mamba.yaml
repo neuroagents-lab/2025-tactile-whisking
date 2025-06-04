@@ -1,0 +1,9 @@
+name: 'MambaEnc'
+model_dim: 512
+d_intermediate: 0
+nlayers: 4
+ssm_cfg: null
+norm_epsilon: 1e-5
+rms_norm: False
+fused_add_norm: False
+residual_in_fp32: False

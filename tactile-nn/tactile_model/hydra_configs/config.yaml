@@ -1,0 +1,12 @@
+defaults:
+  - data: data
+  - train: train
+  - model: model
+  - test: test
+  - _self_
+
+hydra:
+  run:
+    # Hydra will automatically create the directory:
+    #  outputs/<YYYY-MM-DD>/<train.output_subdir>
+    dir: "outputs/${now:%Y-%m-%d}/${train.run_name}"

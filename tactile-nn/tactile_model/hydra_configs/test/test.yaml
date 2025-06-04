@@ -1,0 +1,2 @@
+load_ckpt_for_nf: True
+activation_stimuli: "/data/group_data/neuroagents_lab/tactile/neural_data/rodgers6_simulated.npz"

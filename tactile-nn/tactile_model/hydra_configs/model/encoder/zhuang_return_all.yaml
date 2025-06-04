@@ -1,0 +1,9 @@
+model_config_file: 'model_configs/rnn_fdb_converted_modern.json'
+name: 'TNNEncoder'
+n_times: 22
+full_unroll: False
+dropout: 0.0
+return_all: True
+input_transform:
+  name: null
+  kwargs: null

@@ -1,0 +1,11 @@
+name: 'MLP'
+n_layer: 1
+out_channels: [1000]  # the last one will be overridden by data.num_classes
+init_dict: null  # {"method": "trunc_normal_"}
+dropout: 0.0
+use_bias: True
+bias: null  # 0.1
+batchnorm: null # null is for no batch norm
+activation: null  # last layer should have no activation
+temporal_decoder: True
+temporal_steps: [-1] # 'all' # or a list [t1, t2, ...]

@@ -1,0 +1,7 @@
+/out
+
+*.out
+*.err
+
+# generated scripts
+model_eval_*.sh

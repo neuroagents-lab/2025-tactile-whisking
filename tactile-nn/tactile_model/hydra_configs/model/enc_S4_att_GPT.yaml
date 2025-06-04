@@ -1,0 +1,8 @@
+defaults:
+  - encoder: s4
+  - attender: gpt
+  - decoder: linear
+
+repr_dim: 512  # output dim of the encoder
+hidden_dim: 512  # output dim of the attender (should be the same as repr_dim)
+out_dim: ${data.num_classes}  # output dim of the decoder, the same as num_classes in the dataset

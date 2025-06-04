@@ -1,0 +1,9 @@
+defaults:
+  - encoder: zhuang_return_all  # to override entirely: https://github.com/facebookresearch/hydra/issues/2798
+  - attender: null  # means identity
+  - decoder: zhuang_addnet  # means identity
+  - _self_
+
+repr_dim: 512  # output dim of the encoder
+hidden_dim: 512  # output dim of the attender
+out_dim: ${data.num_classes}  # output dim of the decoder, the same as num_classes in the dataset

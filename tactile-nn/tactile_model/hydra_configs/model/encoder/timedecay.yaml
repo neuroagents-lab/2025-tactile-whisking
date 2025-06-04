@@ -1,0 +1,11 @@
+model_config_file: 'model_configs/timedecay_intermediate.json'
+name: 'TNNEncoder'
+n_times: 17
+full_unroll: False
+dropout: 0.0
+return_all: False
+input_transform:
+  name: 'MakeMovie'
+  kwargs:
+    times: ${model.encoder.n_times}  # need to check this
+    image_off: 12
