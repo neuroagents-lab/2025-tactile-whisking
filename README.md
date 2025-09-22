@@ -1,11 +1,12 @@
 # Tactile Perception via Mouse Whiskers
 
-This repo contains the code for our paper:
-<p align="center">
-  <a href="https://arxiv.org/abs/2505.18361">
-    <img width="640" alt="Task-Optimized Convolutional Recurrent Networks Align with Tactile Processing in the Rodent Brain" src="https://github.com/user-attachments/assets/8d29cdf9-f909-41bf-a467-96979c4c97ad" />
-  </a>
+This repo contains the code for our paper, [Task-Optimized Convolutional Recurrent Networks Align with Tactile Processing in the Rodent Brain](https://arxiv.org/abs/2505.18361).
+Accepted to NeurIPS 2025 as an oral! 🐭🎉
+<p align="center"> 
+    <img width="800" alt="dataset_process" src="https://github.com/user-attachments/assets/efa16d32-dc18-46b6-bbb1-0bdbbfbe3c2d" />
 </p>
+
+Dataset is available on [HuggingFace](https://huggingface.co/datasets/NeuroAgentsLab/tactile-whisking/tree/main).
 
 - [whisker-sim](./whisker-sim/) is where the mouse whisker data generation is
 - [tactile-nn](./tactile-nn/) is where the model training is
