@@ -1,4 +1,4 @@
-# Tactile Perception via Mouse Whiskers
+# Tactile Processing with Mouse Whiskers
 
 This repo contains the code for our paper, [Task-Optimized Convolutional Recurrent Networks Align with Tactile Processing in the Rodent Brain](https://arxiv.org/abs/2505.18361).
 Accepted to NeurIPS 2025 as an oral! 🐭🎉
