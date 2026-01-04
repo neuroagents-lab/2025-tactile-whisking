@@ -6,7 +6,7 @@ Accepted to NeurIPS 2025 as an oral! 🐭🎉
     <img width="800" alt="dataset_process" src="https://github.com/user-attachments/assets/efa16d32-dc18-46b6-bbb1-0bdbbfbe3c2d" />
 </p>
 
-Dataset is available on [HuggingFace](https://huggingface.co/datasets/NeuroAgentsLab/tactile-whisking/tree/main).
+The shape categorization dataset and best performing model weights are available on [HuggingFace](https://huggingface.co/datasets/NeuroAgentsLab/tactile-whisking/tree/main).
 
 - [whisker-sim](./whisker-sim/) is where the mouse whisker data generation is
 - [tactile-nn](./tactile-nn/) is where the model training is
